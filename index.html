@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Lab 5: Responsive Images </title>
+
+   <link href="mystyle.css" rel="stylesheet" type="text/css">
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+  <section class="bg-section">
+    <h2>Responsive Background Image</h2>
+    <p>This section uses <code>background-image</code> along with <code>background-position</code> and <code>background-size</code> to adjust for different screen sizes.</p>
+  </section>
+
+  <section>
+    <h2>Object-Fit: Cover</h2>
+    <p>This image uses <code>object-fit: cover</code> to maintain aspect ratio while filling its container.</p>
+    <div class="image-cover">
+      <img src="images/time_001.png" alt="Cover example image">
+    </div>
+  </section>
+
+  <section>
+    <h2>Responsive Image with srcset</h2>
+    <p>This image uses <code>srcset</code> and <code>sizes</code> to load different images based on screen resolution.</p>
+    <img 
+      src="images/image1.jpg" 
+      srcset="images/image1.jpg 400w, images/image1.jpg 800w, images/image1.jpg 1200w" 
+      sizes="(max-width: 600px) 100vw, 50vw" 
+      alt="Responsive srcset example"
+      style="width: 100%; max-width: 600px;">
+  </section>
+
+  <section>
+    <h2>Art Direction with &lt;picture&gt; and &lt;source&gt;</h2>
+    <p>This uses the <code>picture</code> element to serve different images depending on screen size/orientation.</p>
+    <picture>
+      <source media="(max-width: 600px)" srcset="images/time_001.png">
+      <source media="(min-width: 601px)" srcset="images/time_001.png">
+      <img src="images/time_002.jpg" alt="Art direction example" style="width: 100%; max-width: 600px;">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Scalable Vector Graphic (SVG)</h2>
+    <p>This SVG scales smoothly with the layout.</p>
+    <img src="logo.svg" alt="Scalable SVG Example" style="width: 200px; height: auto;">
+  </section>
+
+  <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="50" style="fill:red;">
+      <animate
+        attributeName="cx"
+        begin="0s"
+        dur="8s"
+        from="50"
+        to="90%"
+        repeatCount="indefinite" />
+    </circle>
+  </svg>
+
+  </body>
+  </html>
+  

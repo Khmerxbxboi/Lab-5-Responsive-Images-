@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Lab 5: Responsive Images </title>
+
+   <link href="mystyle.css" rel="stylesheet" type="text/css">
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+  <section>
+    <h2>Responsive Image with srcset</h2>
+    <p>This image uses <code>srcset</code> and <code>sizes</code> to load different images based on screen resolution.</p>
+    <img 
+      src="images/image1.jpg" 
+      srcset="images/image1.jpg 400w, images/image1.jpg 800w, images/image1.jpg 1200w" 
+      sizes="(max-width: 600px) 100vw, 50vw" 
+      alt="Responsive srcset example"
+      style="width: 100%; max-width: 600px;">
+  </section>
+  </body>
+  </html>
+  

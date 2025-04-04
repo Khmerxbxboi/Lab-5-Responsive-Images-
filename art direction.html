@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Lab 5: Responsive Images </title>
+
+   <link href="mystyle.css" rel="stylesheet" type="text/css">
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+  <section>
+    <h2>Art Direction with &lt;picture&gt; and &lt;source&gt;</h2>
+    <p>This uses the <code>picture</code> element to serve different images depending on screen size/orientation.</p>
+    <picture>
+      <source media="(max-width: 600px)" srcset="images/time_001.png">
+      <source media="(min-width: 601px)" srcset="images/time_001.png">
+      <img src="images/time_002.jpg" alt="Art direction example" style="width: 100%; max-width: 600px;">
+    </picture>
+  </section>
+  </body>
+  </html>
+  
